@@ -1,0 +1,22 @@
+application:
+  name: aws-test-demo
+  owner: barath
+  team: gisocc
+
+cloud:
+  provider: AWS
+  region: ap-south-1
+  authentication: GitHub OIDC
+  role: arn:aws:iam::954935267694:role/VelocityGitHubActionsRole
+
+service:
+  type: EC2
+
+environment:
+  name: dev
+
+terraform:
+  state_backend: local
+  state_prefix: applications/aws-test-demo
+
+managed_by: Velocity
